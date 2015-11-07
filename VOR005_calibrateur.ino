@@ -61,14 +61,14 @@ defineTimerRun(reflechi,40)
           if (leServo.getType())
               {
                 leServo.setType(false);
-                affichage.affiche(5);
+                affichage.affiche(AFFICHEADAFRUIT);
                 Serial.println("servo de type Adafruit");
                 
                 }
            else
              {
                leServo.setType(true);
-               affichage.affiche(6);
+               affichage.affiche(AFFICHECLASSIQUE);
                Serial.println("servo de type Classique");
                }
           //sleep( 3000);
@@ -93,7 +93,7 @@ defineTimerRun(reflechi,40)
             {
               boutonP.acquit();
               etatCalibrateur=2;
-              affichage.affiche(2);
+              affichage.affiche(AFFICHESWEEP);
               leServo.setObjectif(leServo.getMin());
               
                             
@@ -114,7 +114,7 @@ defineTimerRun(reflechi,40)
             {
               boutonP.acquit();
               etatCalibrateur=3;
-              affichage.affiche(3);
+              affichage.affiche(AFFICHEPOTAR);
               }
                  
              break;
@@ -132,7 +132,7 @@ defineTimerRun(reflechi,40)
             {
               boutonP.acquit();
               etatCalibrateur=3;
-              affichage.affiche(3);
+              affichage.affiche(AFFICHEPOTAR);
               }
                
                
@@ -166,7 +166,7 @@ defineTimerRun(reflechi,40)
             {
               boutonP.acquit();
               etatCalibrateur=4;
-              affichage.affiche(4);
+              affichage.affiche(AFFICHEMILIEU);
               leServo.setObjectif(leServo.getMilieu());
               
               }
@@ -182,7 +182,7 @@ defineTimerRun(reflechi,40)
             {
               boutonP.acquit();
               etatCalibrateur=1;
-              affichage.affiche(1);
+              affichage.affiche(AFFICHEUSB);
                             
               }
            
@@ -217,7 +217,7 @@ void setup()
     mySCoop.start();
    temp=millis();
    //etatCalibrateur=3; fait dans l'init de la variable
-   affichage.affiche(3);
+   affichage.affiche(AFFICHEPOTAR);
    
      
      }

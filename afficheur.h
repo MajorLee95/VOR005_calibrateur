@@ -10,6 +10,15 @@
 #include <Arduino.h>
 #include <Wire.h>
 
+enum{
+  AFFICHERIEN,
+  AFFICHEUSB,
+  AFFICHESWEEP,
+  AFFICHEPOTAR,
+  AFFICHEMILIEU,
+  AFFICHEADAFRUIT,
+  AFFICHECLASSIQUE
+};
 
 class afficheur
 {
