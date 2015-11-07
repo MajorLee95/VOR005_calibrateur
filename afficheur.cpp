@@ -1,3 +1,21 @@
+/*
+#*******************************************************************************
+# Projet : VOR005
+# Sous projet : calibrateur de servo moteurs
+# 
+# Auteurs: Gille De Bussy
+# 
+# class afficheur:
+# gestion afficheur 7 segments au travers d'un PCF8574 en I2C
+
+#*******************************************************************************
+ J.Soranzo
+	07/11/2015 gestion sous git + github
+	https://github.com/MajorLee95/VOR005_calibrateurServoSoft.git
+*/
+
+
+
 #include "afficheur.h"
 
 /*
