@@ -13,13 +13,21 @@
 	07/11/2015 gestion sous git + github
 	https://github.com/MajorLee95/VOR005_calibrateurServoSoft.git
 */
-
+//test de chaque segment de led    
+//        _affichageEnCours[0]=0xFD;//
+//        _affichageEnCours[1]=0xFB;
+//        _affichageEnCours[2]=0xF7;
+//        _affichageEnCours[3]=0xEF;
+//        _affichageEnCours[4]=0xDF;
+//        _affichageEnCours[5]=0xBF;
+//        _affichageEnCours[6]=0xFE;
+//        _affichageEnCours[7]=0xFE;
 
 
 #include "afficheur.h"
 
 /*
-
+// J.Soranzo : afficheur monté à l'envers !
 P : 0x98
 O :0x01
 T : 0xF0
@@ -38,16 +46,7 @@ E : 0xB0
 L : 0XF1
 w: 0xE3
 
-
-
-
-
 */
-
-
-
-
-
 
 afficheur::afficheur(byte adresse)
     {
@@ -65,24 +64,19 @@ void afficheur::refreshAfficheur()
  // Serial.print("numSeq ");
   //Serial.println(_numSeq);
   
-  if (_numMax==0) 
-    {
-      return;
-      }
-  
+  if (_numMax==0) return;
   
   _numSeq=_numSeq+1;
   if (_numSeq>_numMax)
     {
       _numSeq=-1;
       envoi(0xFF);
-     }
+    }
     else
-    
-     {
+    {
        envoi(_affichageEnCours[_numSeq]);
-      }
-  }
+    }
+}
 
 void afficheur::envoi(byte data)
 {
@@ -95,10 +89,9 @@ void afficheur::envoi(byte data)
   //Serial.println(a)  ;
   
   
-  }
+}
 
 void afficheur::affiche(byte toto)
-
 {
   switch (toto)
     {
@@ -120,13 +113,11 @@ void afficheur::affiche(byte toto)
   
     case 2: // affiche SWEEP 
         _affichageEnCours[0]=0xA4;//
-        _affichageEnCours[1]=0xE3;
-        _affichageEnCours[2]=0xB0;
-        _affichageEnCours[3]=0xB0;
-        _affichageEnCours[4]=0x98;
-        
+        _affichageEnCours[1]=0x9D;//
+        _affichageEnCours[2]=0x86;
+        _affichageEnCours[3]=0x86;
+        _affichageEnCours[4]=0xC2; 
        Serial.println("SWEEP"); 
-        
         _numMax =4;       
         break;
      
@@ -154,14 +145,6 @@ void afficheur::affiche(byte toto)
         
         _numMax =5;       
         break;    
-      
-       
-        
-        
-        
-      
-      
-      
 
         case 5: // affiche A Adafruit 
         _affichageEnCours[0]=0x88;
@@ -172,24 +155,7 @@ void afficheur::affiche(byte toto)
         _affichageEnCours[5]=0xC1;
         _affichageEnCours[6]=0xCF;
         _affichageEnCours[7]=0xF0;
-
-
-    //test de chaque segment de led    
-//        _affichageEnCours[0]=0xFD;//
-//        _affichageEnCours[1]=0xFB;
-//        _affichageEnCours[2]=0xF7;
-//        _affichageEnCours[3]=0xEF;
-//        _affichageEnCours[4]=0xDF;
-//        _affichageEnCours[5]=0xBF;
-//        _affichageEnCours[6]=0xFE;
-//        _affichageEnCours[7]=0xFE;
-        
-        
-        
-        
-        
        Serial.println("ADAFRUIT"); 
-        
         _numMax =7;       
         break;   
       
@@ -209,7 +175,8 @@ void afficheur::affiche(byte toto)
         _numMax =8;
            
         break;  
-      
+
+		
       
       
     }  
