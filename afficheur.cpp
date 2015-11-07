@@ -161,15 +161,15 @@ void afficheur::affiche(byte toto)
       
       
       case 6: // affiche classique 
-        _affichageEnCours[0]=0xF1;//
-        _affichageEnCours[1]=0x88;
-        _affichageEnCours[2]=0xF1;
-        _affichageEnCours[3]=0x88;
-        _affichageEnCours[4]=0xF1;
-        _affichageEnCours[5]=0x88;
-        _affichageEnCours[6]=0xF1;
-        _affichageEnCours[7]=0x88;
-        _affichageEnCours[8]=0xF1;
+        _affichageEnCours[0]=0x87; 
+        _affichageEnCours[1]=0x8F; 
+        _affichageEnCours[2]=0xC0; 
+        _affichageEnCours[3]=0xA4; 
+        _affichageEnCours[4]=0xA4; 
+        _affichageEnCours[5]=0xF9; 
+        _affichageEnCours[6]=0xE0; 
+        _affichageEnCours[7]=0x89; 
+        _affichageEnCours[8]=0x86; 
        Serial.println("CLASSIQUE"); 
         
         _numMax =8;
