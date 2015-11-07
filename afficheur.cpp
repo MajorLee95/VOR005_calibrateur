@@ -109,9 +109,9 @@ void afficheur::affiche(byte toto)
         break;
         
     case 1: // affiche USB 
-        _affichageEnCours[0]=0xC1;//
+        _affichageEnCours[0]=0x89;//
         _affichageEnCours[1]=0xA4;//
-        _affichageEnCours[2]=0xF0;//
+        _affichageEnCours[2]=0x8C;//
         
        Serial.println("USB"); 
          
