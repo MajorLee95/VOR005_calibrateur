@@ -135,27 +135,27 @@ void afficheur::affiche(byte toto)
      
      case 4: // affiche Milieu 
   
-        _affichageEnCours[0]=0x89;
-        _affichageEnCours[1]=0xCF;//
-        _affichageEnCours[2]=0xF1;//
-        _affichageEnCours[3]=0xCF;
-        _affichageEnCours[4]=0xB0;//
-        _affichageEnCours[5]=0xC1;//
+        _affichageEnCours[0]=0xC1;
+        _affichageEnCours[1]=0xF9;//
+        _affichageEnCours[2]=0x8F;//
+        _affichageEnCours[3]=0xF9;
+        _affichageEnCours[4]=0x86;//
+        _affichageEnCours[5]=0x89;//
        Serial.println("MILIEU"); 
         
         _numMax =5;       
         break;    
 
         case 5: // affiche A Adafruit 
-        _affichageEnCours[0]=0x88;
-        _affichageEnCours[1]=0xC2;
-        _affichageEnCours[2]=0x88;
-        _affichageEnCours[3]=0xB8;
-        _affichageEnCours[4]=0xFA;
-        _affichageEnCours[5]=0xC1;
-        _affichageEnCours[6]=0xCF;
-        _affichageEnCours[7]=0xF0;
-       Serial.println("ADAFRUIT"); 
+        _affichageEnCours[0]=0xC0;
+        _affichageEnCours[1]=0x98;
+        _affichageEnCours[2]=0xC0;
+        _affichageEnCours[3]=0xC3;
+        _affichageEnCours[4]=0xDE;
+        _affichageEnCours[5]=0x89;
+        _affichageEnCours[6]=0xF9;
+        _affichageEnCours[7]=0x8E;
+       Serial.println("ADAFrUIt"); 
         _numMax =7;       
         break;   
       
