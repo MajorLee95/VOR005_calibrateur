@@ -95,13 +95,13 @@ void afficheur::affiche(byte toto)
 {
   switch (toto)
     {
-    case 0: // affiche rien
+    case AFFICHERIEN : // affiche rien
         _affichageEnCours[0]=0xFF;
        Serial.println("Rien"); 
         _numMax =0;       
         break;
         
-    case 1: // affiche USB 
+    case AFFICHEUSB : // affiche USB 
         _affichageEnCours[0]=0x89;//
         _affichageEnCours[1]=0xA4;//
         _affichageEnCours[2]=0x8C;//
@@ -111,7 +111,7 @@ void afficheur::affiche(byte toto)
         _numMax =2;       
         break;
   
-    case 2: // affiche SWEEP 
+    case AFFICHESWEEP : // affiche SWEEP 
         _affichageEnCours[0]=0xA4;//
         _affichageEnCours[1]=0x9D;//
         _affichageEnCours[2]=0x86;
@@ -121,7 +121,7 @@ void afficheur::affiche(byte toto)
         _numMax =4;       
         break;
      
-     case 3: 
+     case AFFICHEPOTAR : 
         _affichageEnCours[0]=0xC2;
         _affichageEnCours[1]=0x81;
         _affichageEnCours[2]=0x8E;
@@ -133,7 +133,7 @@ void afficheur::affiche(byte toto)
         break; 
      
      
-     case 4: // affiche Milieu 
+     case AFFICHEMILIEU : // affiche Milieu 
   
         _affichageEnCours[0]=0xC1;
         _affichageEnCours[1]=0xF9;//
@@ -146,7 +146,7 @@ void afficheur::affiche(byte toto)
         _numMax =5;       
         break;    
 
-        case 5: // affiche A Adafruit 
+        case AFFICHEADAFRUIT : // affiche A Adafruit 
         _affichageEnCours[0]=0xC0;
         _affichageEnCours[1]=0x98;
         _affichageEnCours[2]=0xC0;
@@ -160,7 +160,7 @@ void afficheur::affiche(byte toto)
         break;   
       
       
-      case 6: // affiche classique 
+      case AFFICHECLASSIQUE : // affiche classique 
         _affichageEnCours[0]=0x87; 
         _affichageEnCours[1]=0x8F; 
         _affichageEnCours[2]=0xC0; 
