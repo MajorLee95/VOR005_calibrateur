@@ -113,11 +113,11 @@ void afficheur::affiche(byte toto)
         break;
      
      case 3: 
-        _affichageEnCours[0]=0x98;
-        _affichageEnCours[1]=0x01;
-        _affichageEnCours[2]=0xF0;
-        _affichageEnCours[3]=0x88;
-        _affichageEnCours[4]=0xFA;
+        _affichageEnCours[0]=0xC2;
+        _affichageEnCours[1]=0x81;
+        _affichageEnCours[2]=0x8E;
+        _affichageEnCours[3]=0xC0;
+        _affichageEnCours[4]=0xDE;
         _numMax=4;
        Serial.println("POtAr"); 
                
